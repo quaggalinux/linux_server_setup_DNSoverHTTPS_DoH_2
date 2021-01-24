@@ -41,23 +41,23 @@ $su
 #nano /usr/lib/systemd/system/dnsproxy.service
 
 写入以下内容,dnsproxy的各种参数可以参考https://github.com/AdguardTeam/dnsproxy 连接的介绍,关键是 -u 参数紧跟的DoH服务器可以换成其他的,甚至是像IPv6的DoH服务器地址https://[2606:4700:4700::1001]/dns-query , 各个DoH服务商DoH的IP地址大家可以自己查,但是务必是查找服务商的IP已经直接签发IP证书的,就是可以直接https://ip 的这种,验证很简单,就是把这个地址按照https://ip/dns-query 格式放到浏览器浏览,如果正常出现小锁头而没有安全告警就是这个IP地址直接签发了证书,如果还用域名连接DoH查DNS的话,底层没有办法脱离原来DNS的限制,等于整台linux服务器还是受制于原来的DNS查询方式
-
-[Unit]
-Description=dnsproxy
-After=network.target
-
-[Service]
-TimeoutStartSec=30
+   
+[Unit]   
+Description=dnsproxy   
+After=network.target   
+   
+[Service]   
+TimeoutStartSec=30   
 ExecStart=/usr/bin/dnsproxy -l 127.0.0.1 -p 53 -u https://9.9.9.10/dns-query -u https://1.0.0.1/dns-query  
-ExecStop=/bin/kill $MAINPID
-
-[Install]
-WantedBy=multi-user.target
-
+ExecStop=/bin/kill $MAINPID   
+   
+[Install]   
+WantedBy=multi-user.target   
+   
 保存并退出
 
-设置开机启动dnsproxy
-#systemctl enable dnsproxy
+设置开机启动dnsproxy  
+#systemctl enable dnsproxy  
 
 启动ssgo服务
 #systemctl start dnsproxy
