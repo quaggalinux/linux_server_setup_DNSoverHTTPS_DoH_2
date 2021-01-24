@@ -1,0 +1,2 @@
+# linux_server_setup_DNSoverHTTPS_DoH_2
+linux服务器另外一种设置DNS查询为DNS over HTTPS(DoH)方式
