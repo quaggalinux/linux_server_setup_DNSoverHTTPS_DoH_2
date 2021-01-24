@@ -48,7 +48,7 @@ After=network.target
 
 [Service]
 TimeoutStartSec=30
-ExecStart=/usr/bin/dnsproxy -l 127.0.0.1 -p 53 -u https://9.9.9.10/dns-query -u https://1.0.0.1/dns-query
+ExecStart=/usr/bin/dnsproxy -l 127.0.0.1 -p 53 -u https://9.9.9.10/dns-query -u https://1.0.0.1/dns-query  
 ExecStop=/bin/kill $MAINPID
 
 [Install]
