@@ -9,7 +9,7 @@ $su
 
 #cd /
 
-具体机器的系统架构及操作系统版本可查询https://github.com/AdguardTeam/dnsproxy/releases连接
+具体机器的系统架构及操作系统版本可查询https://github.com/AdguardTeam/dnsproxy/releases 连接
 
 #wget https://github.com/AdguardTeam/dnsproxy/releases/download/v0.33.8/dnsproxy-linux-amd64-v0.33.8.tar.gz
 
