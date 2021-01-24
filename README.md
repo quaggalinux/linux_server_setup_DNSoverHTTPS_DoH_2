@@ -1,7 +1,7 @@
 # linux_server_setup_DNSoverHTTPS_DoH_2
 linux服务器另外一种设置DNS查询为DNS over HTTPS(DoH)方式
 
-之前我的一个repo已经介绍了利用cloudflare程序设置linux服务器DNS查询为DNS over HTTPS(DoH)方式,下面介绍另外一种方式,利用了DNSproxy这个程序,DNSproxy是AdguardTeam在github上的一个项目,原理与cloudflare程序差不多
+之前的一个repo已经介绍了利用cloudflare程序设置linux服务器DNS查询为DNS over HTTPS(DoH)方式,下面介绍另外一种方式,利用了DNSproxy这个程序,DNSproxy是AdguardTeam在github上的一个项目,原理与cloudflare程序差不多
 
 首先下载dnsproxy的linux运行版
 
